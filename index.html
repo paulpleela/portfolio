@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth snap-y snap-mandatory">
   <head>
     <meta charset="UTF-8" />
     <link
@@ -15,7 +15,7 @@
   <body>
     <div id="app">
       <nav
-        class="mx-auto w-full h-16 sm:px-6 lg:px-8 bg-white shadow fixed top-0 z-50"
+        class="mx-auto w-full h-16 sm:px-6 lg:px-8 bg-white shadow fixed top-0 z-50 px-4"
       >
         <div class="relative flex h-16 items-center justify-between">
           <div
@@ -32,22 +32,22 @@
               <div class="hidden lg:flex space-x-6 ml-auto items-center">
                 <a
                   href="#home"
-                  class="text-black hover:text-indigo-500 rounded-md px-3 py-2 text-lg font-medium"
+                  class="text-black hover:text-emerald-700 rounded-md px-3 py-2 text-lg font-medium"
                   >Home</a
                 >
                 <a
                   href="#about"
-                  class="text-black hover:text-indigo-500 rounded-md px-3 py-2 text-lg font-medium"
+                  class="text-black hover:text-emerald-700 rounded-md px-3 py-2 text-lg font-medium"
                   >About</a
                 >
                 <a
                   href="#projects"
-                  class="text-black hover:text-indigo-500 rounded-md px-3 py-2 text-lg font-medium"
+                  class="text-black hover:text-emerald-700 rounded-md px-3 py-2 text-lg font-medium"
                   >Projects</a
                 >
                 <a
                   href="#contact"
-                  class="text-white bg-indigo-500 hover:bg-indigo-700 rounded-md px-3 py-2 text-lg font-medium"
+                  class="text-white bg-emerald-800 hover:bg-emerald-700 rounded-md px-3 py-2 text-lg font-medium"
                   >Get in touch</a
                 >
               </div>
@@ -61,14 +61,34 @@
 
       <section
         id="home"
-        class="flex items-center justify-center bg-stone-100 min-h-screen flex-col lg:flex-row"
+        class="relative flex items-center justify-center bg-stone-100 min-h-screen flex-col lg:flex-row p-6 snap-always snap-start"
       >
+        <div
+          class="absolute top-0 left-0 right-0 bottom-0 overflow-hidden flex flex-col pointer-events-none z-40"
+        >
+          <div>
+            <img
+              src="https://www.reshot.com/preview-assets/icons/P5SD6TWXAK/broken-leaf-P5SD6TWXAK.svg"
+              class="w-10 z-40 leaf1-animation"
+            />
+          </div>
+          <div>
+            <img
+              src="https://www.reshot.com/preview-assets/icons/P5SD6TWXAK/broken-leaf-P5SD6TWXAK.svg"
+              class="w-10 z-40 leaf2-animation"
+            />
+          </div>
+        </div>
         <div class="flex flex-col order-2 lg:order-1">
-          <span
-            class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-indigo-500 font-code"
+          <div
+            class="overflow-hidden border-r-2 border-emerald-700 whitespace-nowrap letter-spacing-0.15em type-animation"
           >
-            Hi, I'm Paul
-          </span>
+            <span
+              class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-900 to-green-700 font-code"
+            >
+              Hi, I'm Paul
+            </span>
+          </div>
           <span class="font-figtree w-96 text-xl py-8">
             I'm a Software Engineering student with a passion for
             <b>Front-end web development</b>.
@@ -83,7 +103,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="54"
                 viewBox="0 0 30 30"
-                class="hover:fill-indigo-500"
+                class="hover:fill-emerald-800"
               >
                 <path
                   d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"
@@ -100,7 +120,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
                 width="40"
-                class="hover:fill-indigo-500"
+                class="hover:fill-emerald-800"
               >
                 <path
                   d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"
@@ -122,10 +142,11 @@
 
       <section
         id="about"
-        class="flex items-center justify-center min-h-screen flex-col lg:flex-row"
+        class="flex items-center justify-center min-h-screen flex-col lg:flex-row p-6 snap-always snap-start"
       >
         <div class="flex flex-col">
-          <span class="text-indigo-500 font-bold font-lexend text-2xl my-2"
+          <span
+            class="text-emerald-800 font-bold font-lexend text-2xl my-8 lg:my-2"
             >ABOUT ME</span
           >
           <span class="font-figtree w-96 text-md font-bold">
@@ -142,128 +163,263 @@
         </div>
 
         <div
-          class="grid items-center grid-cols-4 gap-y-8 gap-x-4 lg:grid-cols-6 lg:gap-x-8 lg:w-2/5 lg:ml-10 mt-10 lg:mt-0"
+          class="grid items-center grid-cols-3 gap-y-8 gap-x-10 lg:grid-cols-6 lg:gap-x-8 lg:w-2/5 lg:ml-10 mt-10 lg:mt-0"
         >
           <img
             src="https://cdn.worldvectorlogo.com/logos/html-1.svg"
             alt="HTML"
             title="HTML"
-            class="w-14 h-auto"
+            class="w-12 lg:w-14 h-auto"
           />
 
           <img
             src="https://cdn.worldvectorlogo.com/logos/css-3.svg"
             alt="CSS"
             title="CSS"
-            class="w-14 h-auto"
+            class="w-12 lg:w-14 h-auto"
           />
 
           <img
             src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg"
             alt="JavaScript"
             title="JavaScript"
-            class="w-16 h-auto"
+            class="w-14 lg:w-16 h-auto"
           />
 
           <img
             src="https://cdn.worldvectorlogo.com/logos/react-2.svg"
             alt="ReactJS"
             title="ReactJS"
-            class="w-16 h-auto"
+            class="w-14 lg:w-16 h-auto"
           />
 
           <img
             src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg"
             alt="TailwindCSS"
             title="TailwindCSS"
-            class="w-20 h-auto"
+            class="w-16 lg:w-20 h-auto"
           />
 
           <img
             src="https://cdn.worldvectorlogo.com/logos/sass-1.svg"
             alt="Sass"
             title="Sass"
-            class="w-20 h-auto"
+            class="w-16 lg:w-20 h-auto"
           />
 
           <img
             src="https://cdn.worldvectorlogo.com/logos/python-5.svg"
             alt="Python"
             title="Python"
-            class="w-16 h-auto"
+            class="w-14 lg:w-16 h-auto"
           />
 
           <img
             src="https://cdn.worldvectorlogo.com/logos/fastapi.svg"
             alt="FastAPI"
             title="FastAPI"
-            class="w-16 h-auto"
+            class="w-14 lg:w-16 h-auto"
           />
 
           <img
             src="https://cdn.worldvectorlogo.com/logos/c.svg"
             alt="C++"
             title="C++"
-            class="w-16 h-auto"
+            class="w-14 lg:w-16 h-auto"
           />
 
           <img
             src="https://www.svgrepo.com/show/354202/postman-icon.svg"
             alt="Postman"
             title="Postman"
-            class="w-16 h-auto"
+            class="w-14 lg:w-16 h-auto"
           />
 
           <img
             src="https://cdn.worldvectorlogo.com/logos/git-icon.svg"
             alt="Git"
             title="Git"
-            class="w-16 h-auto"
+            class="w-14 lg:w-16 h-auto"
           />
           <img
             src="https://www.svgrepo.com/show/353733/figma.svg"
             alt="Figma"
             title="Figma"
-            class="w-16 h-auto"
+            class="w-14 lg:w-16 h-auto"
           />
         </div>
       </section>
 
       <section
         id="projects"
-        class="flex items-center justify-center bg-stone-100 min-h-screen flex-col lg:flex-row"
+        class="flex items-center justify-center bg-stone-100 min-h-screen flex-col lg:flex-row p-6 snap-always snap-start"
       ></section>
 
       <section
         id="contact"
-        class="flex flex-row items-center justify-center min-h-screen"
+        class="flex flex-row items-center justify-center min-h-screen p-6 snap-always snap-start"
       >
         <div class="flex flex-col text-center w-full">
-          <span class="text-indigo-500 font-bold font-lexend text-2xl my-2"
+          <span class="text-emerald-800 font-bold font-lexend text-2xl my-2"
             >CONTACT ME</span
           >
-          <span class="font-figtree text-md mt-2 font-lexend"
+          <span class="font-figtree text-lg mt-2"
             >I'm currently looking for internship opportunities for April-June
             2024</span
           >
           <div class="flex justify-center flex-col lg:flex-row mx-4">
             <div
-              class="bg-stone-200 lg:w-1/3 h-96 mt-10 rounded-lg shadow-lg lg:mr-10 p-4"
+              class="lg:w-1/3 lg:mt-10 rounded-lg lg:mr-10 p-4 order-2 lg:order-1"
             >
-              <form>
-                
+              <form
+                id="contactForm"
+                action="https://formsubmit.co/paulpleela@gmail.com"
+                method="POST"
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <div class="mb-4">
+                  <label
+                    for="name"
+                    class="block text-left text-emerald-800 text-sm font-bold mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-3 py-2 border rounded-md shadow appearance-none focus:outline-none"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    for="email"
+                    class="block text-left text-emerald-800 text-sm font-bold mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-3 py-2 border rounded-md shadow appearance-none focus:outline-none"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    for="message"
+                    class="block text-left text-emerald-800 text-sm font-bold mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    class="w-full px-3 py-2 border rounded-md shadow appearance-none focus:outline-none"
+                  ></textarea>
+                </div>
+                <div class="flex justify-end">
+                  <button
+                    type="submit"
+                    class="bg-emerald-800 text-white py-2 px-4 rounded-md font-semibold hover:bg-emerald-700 focus:outline-none"
+                  >
+                    Send
+                  </button>
+                </div>
               </form>
             </div>
-            <div class="lg:w-1/3 mt-10">
-              
+            <div
+              class="lg:w-1/3 lg:mt-16 space-y-6 py-6 lg:px-6 order-1 lg:order-2"
+            >
+              <div class="flex items-center">
+                <i
+                  class="fa-regular fa-compass w-12 h-12 rounded-full shadow-[rgba(230,230,230,0.5)_0px_0px_8px_3px] flex items-center justify-center text-emerald-800 text-2xl"
+                ></i>
+                <span class="font-code ml-3">Bangkok, Thailand</span>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-mobile-screen-button w-12 h-12 rounded-full shadow-[rgba(230,230,230,0.5)_0px_0px_8px_3px] flex items-center justify-center text-emerald-800 text-xl"
+                ></i>
+                <a href="tel:+66612468790" class="font-code ml-3"
+                  >(+66) 061-246-8790</a
+                >
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-regular fa-envelope w-12 h-12 rounded-full shadow-[rgba(230,230,230,0.5)_0px_0px_8px_3px] flex items-center justify-center text-emerald-800 text-2xl"
+                ></i>
+                <a href="mailto:paulpleela@gmail.com" class="font-code ml-3"
+                  >paulpleela@gmail.com</a
+                >
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-brands fa-linkedin-in w-12 h-12 rounded-full shadow-[rgba(230,230,230,0.5)_0px_0px_8px_3px] flex items-center justify-center text-emerald-800 text-xl"
+                ></i>
+                <a
+                  href="https://www.linkedin.com/in/paulpleela/"
+                  class="font-code ml-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/paulpleela</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <footer
-        class="flex items-center justify-center bg-stone-600 min-h-40 flex-col lg:flex-row"
-      ></footer>
+        class="flex items-center justify-between px-2 lg:px-14 bg-emerald-900 min-h-28 snap-start"
+      >
+        <div class="flex flex-col lg:flex-row">
+          <span class="text-md mt-2 font-code text-white lg:pr-2"
+            >&copy;2023 Peeranat Leelawattanapanit.</span
+          >
+          <span class="text-md mt-2 font-code text-white"
+            >All rights reserved.</span
+          >
+        </div>
+        <div class="flex justify-end items-center">
+          <a
+            href="https://www.linkedin.com/in/paulpleela/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              viewBox="0 0 30 30"
+              class="fill-white hover:w-11"
+            >
+              <path
+                d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://github.com/paulpleela"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="pl-1 lg:pl-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="26"
+              class="fill-white hover:w-8"
+            >
+              <path
+                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"
+              />
+            </svg>
+          </a>
+        </div>
+      </footer>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
