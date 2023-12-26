@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+}
+}
+
 .type-animation {
   animation: typing 2s steps(20, end), blink 1s step-end infinite;
 }
@@ -28,32 +40,35 @@
 }
 
 .leaf1-animation {
-  animation: flow 20s linear infinite;
+  animation: flow 13s linear forwards;
+  animation-delay: 3s;
 }
 
 .leaf2-animation {
   transform: rotate(90deg);
-  animation: flow 13s linear infinite;
+  animation: flow 22s linear forwards;
+  animation-delay: 1s;
+  transform: translateX(-5vw) rotate(80deg);
 }
 
 @keyframes flow {
   0% {
     opacity: 1;
-    transform: translateX(0vw) rotate(80deg);
+    transform: translateX(-5vw) rotate(80deg);
   }
   20% {
     transform: translateX(20vw) translateY(15vh) rotate(100deg);
   }
   40% {
-    transform: translateX(40vw) translateY(40vh) rotate(90deg);
+    transform: translateX(40vw) translateY(25vh) rotate(90deg);
   }
   60% {
-    transform: translateX(60vw) translateY(55vh) rotate(80deg);
+    transform: translateX(60vw) translateY(40vh) rotate(90deg);
   }
   80% {
-    transform: translateX(75vw) translateY(65vh) rotate(120deg);
+    transform: translateX(80vw) translateY(60vh) rotate(100deg);
   }
   100% {
-    transform: translateX(100vw) translateY(80vh) rotate(90deg);
+    transform: translateX(100vw) translateY(75vh) rotate(90deg);
   }
 }

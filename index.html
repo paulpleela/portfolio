@@ -29,7 +29,7 @@
               >
                 Peeranat Leelawattanapanit
               </div>
-              <div class="hidden lg:flex space-x-6 ml-auto items-center">
+              <div class="hidden lg:flex space-x-8 ml-auto items-center">
                 <a
                   href="#home"
                   class="text-black hover:text-emerald-700 rounded-md px-3 py-2 text-lg font-medium"
@@ -52,9 +52,6 @@
                 >
               </div>
             </div>
-            <div class="flex items-center">
-              <i class="fa-solid fa-moon text-xl lg:ml-20"></i>
-            </div>
           </div>
         </div>
       </nav>
@@ -69,7 +66,7 @@
           <div>
             <img
               src="https://www.reshot.com/preview-assets/icons/P5SD6TWXAK/broken-leaf-P5SD6TWXAK.svg"
-              class="w-10 z-40 leaf1-animation"
+              class="w-10 z-40 leaf1-animation mb-96"
             />
           </div>
           <div>
@@ -84,16 +81,16 @@
             class="overflow-hidden border-r-2 border-emerald-700 whitespace-nowrap letter-spacing-0.15em type-animation"
           >
             <span
-              class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-900 to-green-700 font-code"
+              class="text-5xl lg:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-900 to-green-700 font-code lg:ml-1"
             >
               Hi, I'm Paul
             </span>
           </div>
-          <span class="font-figtree w-96 text-xl py-8">
+          <span class="font-figtree w-96 text-xl py-8 lg:ml-1">
             I'm a Software Engineering student with a passion for
             <b>Front-end web development</b>.
           </span>
-          <div class="flex justify-end mr-8 items-center">
+          <div class="flex items-center">
             <a
               href="https://www.linkedin.com/in/paulpleela/"
               target="_blank"
@@ -138,32 +135,43 @@
             class="w-80 h-80"
           />
         </div>
+        <div
+          class="absolute left-0 right-0 bottom-0 h-20 w-full text-center z-40"
+        >
+          <a href="#about" class="cursor-pointer">
+            <i
+              class="fa-solid fa-angles-down text-4xl text-emerald-800 h-20 animate-bounce hover:text-green-700"
+            ></i>
+          </a>
+        </div>
       </section>
 
       <section
         id="about"
         class="flex items-center justify-center min-h-screen flex-col lg:flex-row p-6 snap-always snap-start"
       >
-        <div class="flex flex-col">
+        <div class="flex flex-col lg:mr-6">
           <span
-            class="text-emerald-800 font-bold font-lexend text-2xl my-8 lg:my-2"
+            class="text-emerald-800 font-bold font-lexend text-2xl my-8 lg:my-4"
             >ABOUT ME</span
           >
-          <span class="font-figtree w-96 text-md font-bold">
+          <span
+            class="font-figtree w-80 lg:w-96 text-md lg:text-lg font-bold lg:my-2"
+          >
             I'm currently pursuing a Bachelor's Degree in Software Engineering
             at KMITL, Thailand.
           </span>
-          <span class="font-figtree w-96 text-md mt-2">
+          <span class="font-figtree w-80 lg:w-96 text-md lg:text-lg mt-2">
             Having designed and developed responsive web applications, I'm
-            familiar with front-end technologies including HTML, CSS,
-            JavaScript, React, and Tailwind. As I aspire to be a full stack
-            developer, I also have experience with back-end frameworks like
-            FastAPI.
+            familiar with frontend technologies including HTML, CSS, JavaScript,
+            React, and Tailwind. As I aspire to be a full stack developer, I
+            also have experience with backend frameworks such as FastAPI for
+            building RESTful services.
           </span>
         </div>
 
         <div
-          class="grid items-center grid-cols-3 gap-y-8 gap-x-10 lg:grid-cols-6 lg:gap-x-8 lg:w-2/5 lg:ml-10 mt-10 lg:mt-0"
+          class="grid items-center grid-cols-3 gap-y-8 gap-x-10 lg:grid-cols-6 lg:gap-x-8 lg:w-2/5 lg:ml-10 mt-10"
         >
           <img
             src="https://cdn.worldvectorlogo.com/logos/html-1.svg"
@@ -222,16 +230,16 @@
           />
 
           <img
-            src="https://cdn.worldvectorlogo.com/logos/c.svg"
-            alt="C++"
-            title="C++"
+            src="https://www.svgrepo.com/show/354202/postman-icon.svg"
+            alt="Postman"
+            title="Postman"
             class="w-14 lg:w-16 h-auto"
           />
 
           <img
-            src="https://www.svgrepo.com/show/354202/postman-icon.svg"
-            alt="Postman"
-            title="Postman"
+            src="https://cdn.worldvectorlogo.com/logos/c.svg"
+            alt="C++"
+            title="C++"
             class="w-14 lg:w-16 h-auto"
           />
 
@@ -252,12 +260,286 @@
 
       <section
         id="projects"
-        class="flex items-center justify-center bg-stone-100 min-h-screen flex-col lg:flex-row p-6 snap-always snap-start"
-      ></section>
+        class="flex items-center justify-center bg-stone-100 min-h-screen flex-col p-6 pt-16 lg:pt-6 snap-always snap-start"
+      >
+        <span
+          class="text-emerald-800 font-bold font-lexend text-2xl my-8 lg:my-4"
+          >MY PROJECTS</span
+        >
+        <div
+          class="flex flex-col lg:flex-row w-full overflow-x-auto no-scrollbar rounded-2xl"
+        >
+          <div
+            class="flex flex-col bg-white p-2 m-2 shadow-md rounded-lg w-11/12 max-w-96 mx-auto lg:mx-2"
+          >
+            <div class="flex justify-between mx-1">
+              <span class="font-figtree text-md font-bold text-emerald-800"
+                >E-Commerce</span
+              >
+              <div class="flex flex-col lg:flex-row">
+                <div class="hover:text-emerald-700 lg:mr-4">
+                  <a
+                    href="https://github.com/paulpleela/e-commerce"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-code text-base underline underline-offset-2"
+                  >
+                    View Demo<i
+                      class="fa-solid fa-arrow-up-right-from-square ml-2 text-sm"
+                    ></i>
+                  </a>
+                </div>
+                <div class="hover:text-emerald-700">
+                  <a
+                    href="https://github.com/paulpleela/e-commerce"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-code text-base underline underline-offset-2"
+                  >
+                    View Code<i
+                      class="fa-solid fa-arrow-up-right-from-square ml-2 text-sm"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="w-full max-w-96 my-1 p-1">
+              <img
+                src="https://images.pexels.com/photos/3121347/pexels-photo-3121347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                class="h-auto rounded-md"
+              />
+            </div>
+            <span class="font-figtree w-full text-md">
+              sit amet luctus venenatis lectus magna fringilla urna porttitor
+              rhoncus dolor purus non enim praesent elementum facilisis leo vel
+              fringilla est ullamcorper eget nulla facilisi etiam dignissim diam
+              quis enim lobortis scelerisque fermentum dui faucibus in ornare
+              quam viverra orci sagittis eu volutpat odio facilisis
+            </span>
+            <div class="w-full lg:w-96 mt-1 flex flex-wrap gap-1">
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >ReactJS</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >SCSS</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >External API</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >NextJS</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >Figma</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >MaterialUI</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >HTML Email Template</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >Vercel</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col bg-white p-2 m-2 shadow-md rounded-lg w-11/12 max-w-96 mx-auto lg:mx-2"
+          >
+            <div class="flex justify-between mx-1">
+              <span class="font-figtree text-md font-bold text-emerald-800"
+                >Project Manager</span
+              >
+              <div class="hover:text-emerald-700">
+                <a
+                  href="https://github.com/paulpleela/project-manager"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-code text-base underline underline-offset-2"
+                >
+                  View Code<i
+                    class="fa-solid fa-arrow-up-right-from-square ml-2 text-sm"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div class="w-full max-w-96 my-1 p-1">
+              <img
+                src="https://images.pexels.com/photos/3121347/pexels-photo-3121347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                class="h-auto rounded-md"
+              />
+            </div>
+            <span class="font-figtree w-full text-md">
+              sit amet luctus venenatis lectus magna fringilla urna porttitor
+              rhoncus dolor purus non enim praesent elementum facilisis leo vel
+              fringilla est ullamcorper eget nulla facilisi etiam dignissim diam
+              quis enim lobortis scelerisque fermentum dui faucibus in ornare
+              quam viverra orci sagittis eu volutpat odio facilisis
+            </span>
+            <div class="w-full lg:w-96 mt-1 flex flex-wrap gap-1">
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >ReactJS</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >TailwindCSS</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >FastAPI</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >Postman</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >WebSockets</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >MongoDB</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >DaisyUI</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col bg-white p-2 m-2 shadow-md rounded-lg w-11/12 max-w-96 mx-auto lg:mx-2"
+          >
+            <div class="flex justify-between mx-1">
+              <span class="font-figtree text-md font-bold text-emerald-800"
+                >Assignment Manager</span
+              >
+              <div class="hover:text-emerald-700">
+                <a
+                  href="https://github.com/paulpleela/assignment-manager"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-code text-base underline underline-offset-2"
+                >
+                  View Code<i
+                    class="fa-solid fa-arrow-up-right-from-square ml-2 text-sm"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div class="w-full max-w-96 my-1 p-1">
+              <img
+                src="https://images.pexels.com/photos/3121347/pexels-photo-3121347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                class="h-auto rounded-md"
+              />
+            </div>
+            <span class="font-figtree w-full text-md">
+              A web application designed for Software Engineering students to
+              track their assignments. This team project allows students to view
+              a calendar displaying upcoming assignments and events. It also
+              offers a forum feature for discussing assignment details,
+              promoting collaboration within the community.
+            </span>
+            <div class="w-full lg:w-96 mt-1 flex flex-wrap gap-1">
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >HTML</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >CSS</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >JavaScript</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >FastAPI</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >Jinja2</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >ZODB</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >GitHub</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col bg-white p-2 m-2 shadow-md rounded-lg w-11/12 max-w-96 mx-auto lg:mx-2"
+          >
+            <div class="flex justify-between mx-1">
+              <span class="font-figtree text-md font-bold text-emerald-800"
+                >Finance Tracker</span
+              >
+              <div class="hover:text-emerald-700">
+                <a
+                  href="https://github.com/paulpleela/finance-tracker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-code text-md underline underline-offset-2"
+                >
+                  View Code<i
+                    class="fa-solid fa-arrow-up-right-from-square ml-2 text-sm"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div class="w-full max-w-96 my-1 p-1">
+              <img
+                src="https://images.pexels.com/photos/3121347/pexels-photo-3121347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                class="h-auto rounded-md"
+              />
+            </div>
+            <span class="font-figtree w-full text-md">
+              A desktop application designed to easily and effectively manage
+              financial transactions. This project provides a platform for users
+              to log their income and expenses, as well as track their monthly
+              budget and savings. It also offers an Analytics feature for
+              viewing charts by category and timeframe.
+            </span>
+            <div class="w-full lg:w-96 mt-1 flex flex-wrap gap-1">
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >Python</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >SQLite</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >Tkinter</span
+              >
+              <span
+                class="text-emerald-700 border border-emerald-700 rounded-full px-2"
+                >Matplotlib</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section
         id="contact"
-        class="flex flex-row items-center justify-center min-h-screen p-6 snap-always snap-start"
+        class="flex flex-row items-center justify-center min-h-screen p-6 pt-20 lg:pt-6 snap-always snap-start"
       >
         <div class="flex flex-col text-center w-full">
           <span class="text-emerald-800 font-bold font-lexend text-2xl my-2"
