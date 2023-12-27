@@ -40,14 +40,13 @@
 }
 
 .leaf1-animation {
-  animation: flow 13s linear forwards;
-  animation-delay: 3s;
+  animation: flow 27s linear forwards;
+  animation-delay: 4s;
 }
 
 .leaf2-animation {
   transform: rotate(90deg);
   animation: flow 22s linear forwards;
-  animation-delay: 1s;
   transform: translateX(-5vw) rotate(80deg);
 }
 
