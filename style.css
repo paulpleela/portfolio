@@ -13,7 +13,11 @@
   .no-scrollbar {
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
+  }
 }
+
+.cursor-down {
+  cursor: url("data:image/svg+xml, %3Csvg width='32' height='32' viewBox='8 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='0.5' fill='white' d='M8 12 L16 20 L24 12 Z' /%3E%3C/svg%3E"), pointer;
 }
 
 .type-animation {
@@ -39,35 +43,46 @@
   }
 }
 
-.leaf1-animation {
-  animation: flow 27s linear forwards;
-  animation-delay: 4s;
+.outside-view-x {
+  opacity: 0.5;
+  transform: translateX(-100%);
+  transition: all 0s;
 }
 
-.leaf2-animation {
-  transform: rotate(90deg);
-  animation: flow 22s linear forwards;
-  transform: translateX(-5vw) rotate(80deg);
+.inside-view-x {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 2s;
 }
 
-@keyframes flow {
-  0% {
-    opacity: 1;
-    transform: translateX(-5vw) rotate(80deg);
+.outside-view-y {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateY(10%);
+}
+
+.inside-view-y {
+  opacity: 1;
+  transition: all 2s;
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion: no-preference) {
+  .outside-view-x, .outside-view-y {
+    transition: all 1s;
   }
-  20% {
-    transform: translateX(20vw) translateY(15vh) rotate(100deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .card:nth-child(2) {
+    transition-delay: 100ms;
   }
-  40% {
-    transform: translateX(40vw) translateY(25vh) rotate(90deg);
+
+  .card:nth-child(3) {
+    transition-delay: 200ms;
   }
-  60% {
-    transform: translateX(60vw) translateY(40vh) rotate(90deg);
-  }
-  80% {
-    transform: translateX(80vw) translateY(60vh) rotate(100deg);
-  }
-  100% {
-    transform: translateX(100vw) translateY(75vh) rotate(90deg);
+
+  .card:nth-child(4) {
+    transition-delay: 300ms;
   }
 }

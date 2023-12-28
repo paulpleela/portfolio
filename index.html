@@ -60,22 +60,6 @@
         id="home"
         class="relative flex items-center justify-center bg-stone-100 min-h-screen flex-col lg:flex-row p-6 snap-always snap-start"
       >
-        <div
-          class="absolute top-0 left-0 right-0 bottom-0 overflow-hidden flex flex-col pointer-events-none z-40"
-        >
-          <div>
-            <img
-              src="https://www.reshot.com/preview-assets/icons/P5SD6TWXAK/broken-leaf-P5SD6TWXAK.svg"
-              class="w-10 z-40 leaf1-animation mb-80"
-            />
-          </div>
-          <div>
-            <img
-              src="https://www.reshot.com/preview-assets/icons/P5SD6TWXAK/broken-leaf-P5SD6TWXAK.svg"
-              class="w-10 z-40 leaf2-animation"
-            />
-          </div>
-        </div>
         <div class="flex flex-col order-2 lg:order-1">
           <div
             class="overflow-hidden border-r-2 border-emerald-700 whitespace-nowrap letter-spacing-0.15em type-animation"
@@ -127,7 +111,7 @@
           </div>
         </div>
         <div
-          class="relative w-60 h-60 order-1 lg:order-2 overflow-hidden lg:ml-20 m-10 lg:m-0"
+          class="relative w-60 h-60 order-1 lg:order-2 rounded-md overflow-hidden lg:ml-20 m-14 lg:m-0"
         >
           <img
             src="https://images.pexels.com/photos/1004366/pexels-photo-1004366.jpeg"
@@ -135,22 +119,17 @@
             class="w-80 h-80"
           />
         </div>
-        <div
-          class="absolute left-0 right-0 bottom-0 h-20 w-full text-center z-40"
+        <a href="#about"
+          class="hidden lg:block cursor-down absolute left-0 right-0 bottom-0 h-40 w-full text-center z-40"
         >
-          <a href="#about" class="cursor-pointer">
-            <i
-              class="fa-solid fa-angle-down text-4xl text-emerald-800 h-20 animate-bounce hover:text-green-700"
-            ></i>
-          </a>
-        </div>
+        </a>
       </section>
 
       <section
         id="about"
         class="flex items-center justify-center min-h-screen flex-col lg:flex-row p-6 snap-always snap-start"
       >
-        <div class="flex flex-col lg:mr-6">
+        <div class="outside-view-y flex flex-col lg:mr-6">
           <span
             class="text-emerald-800 font-bold font-lexend text-2xl my-8 lg:my-4"
             >ABOUT ME</span
@@ -165,13 +144,12 @@
             Having designed and developed responsive web applications, I'm
             familiar with frontend technologies including HTML, CSS, JavaScript,
             React, and Tailwind. As I aspire to be a full stack developer, I
-            also have experience with backend frameworks such as FastAPI for
-            building RESTful services.
+            also have experience building RESTful services with backend frameworks such as FastAPI.
           </span>
         </div>
 
         <div
-          class="grid items-center grid-cols-3 gap-y-8 gap-x-10 lg:grid-cols-6 lg:gap-x-8 lg:w-2/5 lg:ml-10 mt-10"
+          class="outside-view-y grid items-center grid-cols-3 gap-y-8 gap-x-10 lg:grid-cols-6 lg:gap-x-8 lg:w-2/5 lg:ml-10 mt-10"
         >
           <img
             src="https://cdn.worldvectorlogo.com/logos/html-1.svg"
@@ -270,7 +248,7 @@
           class="flex flex-col items-center lg:items-stretch lg:justify-between lg:px-8 lg:flex-row w-full lg:py-6 overflow-x-auto no-scrollbar rounded-2xl"
         >
           <div
-            class="flex flex-col bg-white p-2 m-4 shadow-md rounded-lg w-11/12 max-w-96 lg:w-72 lg:min-w-72 transform lg:hover:scale-110"
+            class="card outside-view-x flex flex-col bg-white p-2 m-4 shadow-md rounded-lg w-11/12 max-w-96 lg:w-72 lg:min-w-72 transform lg:hover:scale-110 lg:hover:delay-0"
           >
             <div class="flex justify-between mx-1">
               <span class="font-figtree text-md font-bold text-emerald-800"
@@ -346,7 +324,7 @@
           </div>
 
           <div
-            class="flex flex-col bg-white p-2 m-4 shadow-md rounded-lg w-11/12 max-w-96 lg:w-72 lg:min-w-72 transform lg:hover:scale-110"
+            class="card outside-view-x flex flex-col bg-white p-2 m-4 shadow-md rounded-lg w-11/12 max-w-96 lg:w-72 lg:min-w-72 transform lg:hover:scale-110 lg:hover:delay-0"
           >
             <div class="flex justify-between mx-1">
               <span class="font-figtree text-md font-bold text-emerald-800"
@@ -410,7 +388,7 @@
           </div>
 
           <div
-            class="flex flex-col bg-white p-2 m-4 shadow-md rounded-lg w-11/12 max-w-96 lg:w-72 lg:min-w-72 transform lg:hover:scale-110"
+            class="card outside-view-x flex flex-col bg-white p-2 m-4 shadow-md rounded-lg w-11/12 max-w-96 lg:w-72 lg:min-w-72 transform lg:hover:scale-110 lg:hover:delay-0"
           >
             <div class="flex justify-between mx-1">
               <span class="font-figtree text-md font-bold text-emerald-800"
@@ -472,7 +450,7 @@
           </div>
 
           <div
-            class="flex flex-col bg-white p-2 m-4 shadow-md rounded-lg w-11/12 max-w-96 lg:w-72 lg:min-w-72 transform lg:hover:scale-110"
+            class="card outside-view-x flex flex-col bg-white p-2 m-4 shadow-md rounded-lg w-11/12 max-w-96 lg:w-72 lg:min-w-72 transform lg:hover:scale-110 lg:hover:delay-0"
           >
             <div class="flex justify-between mx-1">
               <span class="font-figtree text-md font-bold text-emerald-800"
@@ -528,14 +506,14 @@
 
       <section
         id="contact"
-        class="flex flex-row items-center justify-center min-h-screen p-6 pt-20 lg:pt-6 snap-always snap-start"
+        class="flex flex-row items-center justify-center min-h-screen p-6 pt-20 lg:pt-6 snap-always snap-start z-40"
       >
-        <div class="flex flex-col text-center w-full">
+        <div class="outside-view-y flex flex-col text-center w-full">
           <span class="text-emerald-800 font-bold font-lexend text-2xl my-2"
             >CONTACT ME</span
           >
           <span class="font-figtree text-lg mt-2"
-            >I'm currently looking for internship opportunities for April-June
+            >I'm currently looking for internship opportunities in April-June
             2024</span
           >
           <div class="flex justify-center flex-col lg:flex-row mx-4">
@@ -645,7 +623,7 @@
       </section>
 
       <footer
-        class="flex items-center justify-between px-2 lg:px-14 bg-emerald-900 min-h-28 snap-start"
+        class="flex items-center justify-between px-2 lg:px-14 bg-emerald-900 min-h-28 snap-start z-50"
       >
         <div class="flex flex-col lg:flex-row">
           <span class="text-md mt-2 font-code text-white lg:pr-2"
@@ -692,6 +670,6 @@
         </div>
       </footer>
     </div>
-    <script type="module" src="/main.js"></script>
+    <script defer type="module" src="/main.js"></script>
   </body>
 </html>
