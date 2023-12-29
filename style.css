@@ -43,37 +43,19 @@
   }
 }
 
-.outside-view-x {
-  opacity: 0.5;
-  transform: translateX(-100%);
-  transition: all 0s;
-}
-
-.inside-view-x {
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 2s;
-}
-
-.outside-view-y {
-  opacity: 0;
-  transition: all 1s;
-  transform: translateY(10%);
-}
-
-.inside-view-y {
-  opacity: 1;
-  transition: all 2s;
-  transform: translateY(0);
-}
-
-@media(prefers-reduced-motion: no-preference) {
-  .outside-view-x, .outside-view-y {
-    transition: all 1s;
-  }
-}
-
 @media screen and (min-width: 1024px) {
+  .outside-view-x {
+    opacity: 0.5;
+    transform: translateX(-100%);
+    transition: all 0s;
+  }
+
+  .inside-view-x {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 2s;
+  }
+
   .card:nth-child(2) {
     transition-delay: 100ms;
   }
@@ -84,5 +66,23 @@
 
   .card:nth-child(4) {
     transition-delay: 300ms;
+  }
+}
+
+.outside-view-y {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateY(10%);
+}
+
+.inside-view-y {
+  opacity: 1;
+  transition: all 4s;
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion: no-preference) {
+  .outside-view-x, .outside-view-y {
+    transition: all 1s;
   }
 }
